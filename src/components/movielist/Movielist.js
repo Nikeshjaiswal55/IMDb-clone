@@ -26,14 +26,16 @@ const Movielist = () => {
     return (
         <>
             <h2 className="list__title">{(type ? type : "POPULAR").toUpperCase()}</h2>
-                <div class="card-group">
+                <div class="container">
+                    <div className="row">
                         {
                             movieList.map(movie => (
-                                <div className='col-lg-3 col-sm-6 col-12 card_p'>
+                                <div className='col-lg-3 col-md-6 col-12 card_p mb-5'>
                                 <Card movie={movie} />
                                 </div>
                             ))
                         }
+                    </div>
                 </div>
         </>
     )
