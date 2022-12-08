@@ -1,0 +1,13 @@
+.cards__img {
+    height: 400px;
+    width: 250px;
+}
+
+
+.button-color{
+    background-color: rgb(36, 36, 39);
+}
+
+.button-color:hover{
+    background-color: rgb(0, 0, 255);
+}
