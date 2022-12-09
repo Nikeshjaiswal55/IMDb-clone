@@ -17,17 +17,16 @@ const Movie = () => {
     }
     return (
         <>
+        <div className='container'>
             <div className="movie">
-                <div className="movie__intro">
-                    <img className="movie__backdrop" src={`https://image.tmdb.org/t/p/original${moviedetail ? moviedetail.backdrop_path : ""}`} />
+                <div className="movie__intro row">
+                    <img className="movie__backdrop img-fluid" src={`https://image.tmdb.org/t/p/original${moviedetail ? moviedetail.backdrop_path : ""}`} />
                 </div>
-                <div className="movie__detail">
-                    <div className="movie__detailLeft">
-                        <div>
-                            <img className="movie__poster" src={`https://image.tmdb.org/t/p/original${moviedetail ? moviedetail.poster_path : ""}`} />
-                        </div>
+                <div className="movie__detail row">
+                    <div className="movie__detailLeft col-12 col-lg-3 d-flex justify-content-center">
+                            <img className="movie__poster img-fluid" src={`https://image.tmdb.org/t/p/original${moviedetail ? moviedetail.poster_path : ""}`} />
                     </div>
-                    <div className="movie__detailRight">
+                    <div className="movie__detailRight col-12 col-lg-9">
                         <div className="movie__detailRightTop">
                             <div className="movie__name">{moviedetail ? moviedetail.original_title : ""}</div>
                             <div>{moviedetail ? moviedetail.tagline : ""}</div>
@@ -38,7 +37,7 @@ const Movie = () => {
                         </div>
                         <div className="movie__runtime">{moviedetail ? moviedetail.runtime + " mins" : ""}</div>
                         <div className="movie__releaseDate">{moviedetail ? "Release date: " + moviedetail.release_date : ""}</div>
-                        <div className="movie__genres">
+                        <div className="movie__genres d-flex">
                             {
                                 moviedetail && moviedetail.genres
                                     ?
@@ -54,17 +53,19 @@ const Movie = () => {
                             <div>{moviedetail ? moviedetail.overview : ""}</div>
                         </div>
                     </div>
+                            <div className="movie__heading text-center mb-3"><h3>Useful Links</h3></div>
+                    <div className="movie__links d-flex justify-content-around flex-wrap col-12">
+                            {
+                                moviedetail && moviedetail.homepage && <a href={moviedetail.homepage} target="_blank" style={{ textDecoration: "none" }}><p><span className="movie__homeButton movie__Button col-6">Homepage </span></p></a>
+                            }
+                            {
+                                moviedetail && moviedetail.imdb_id && <a href={"https://www.imdb.com/title/" + moviedetail.imdb_id} target="_blank" style={{ textDecoration: "none" }}><p><span className="movie__imdbButton movie__Button col-6">IMDb</span></p></a>
+                            }
                 </div>
-                <div className="movie__links">
-                            <div className="movie__heading">Useful Links</div>
-                            {
-                                moviedetail && moviedetail.homepage && <a href={moviedetail.homepage} target="_blank" style={{ textDecoration: "none" }}><p><span className="movie__homeButton movie__Button">Homepage </span></p></a>
-                            }
-                            {
-                                moviedetail && moviedetail.imdb_id && <a href={"https://www.imdb.com/title/" + moviedetail.imdb_id} target="_blank" style={{ textDecoration: "none" }}><p><span className="movie__imdbButton movie__Button">IMDb</span></p></a>
-                            }
-                        </div>
+
+                </div>
             </div>
+        </div>
         </>
     );
 };

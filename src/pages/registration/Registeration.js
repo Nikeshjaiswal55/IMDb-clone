@@ -29,13 +29,7 @@ function Registration() {
     const send = (values) => {
         console.log(values);
         const url="http://localhost:4000/registration";
-        axios.post(url,{
-            name:values.name,
-            checkbox:values.checkbox,
-            email:values.email,
-            radio:values.radio,
-            password:values.password
-        })
+        axios.post(url,values)
         localStorage.setItem("name",values.name);
         localStorage.setItem("email",values.email);
         localStorage.setItem("password",values.password);
@@ -60,7 +54,7 @@ function Registration() {
                         <p className="text-danger"><ErrorMessage name="email" /></p>
                     </div>
                     <div class="form-group text-field">
-                        <Field class="form-control" type="text" name="password" placeholder="Password" />
+                        <Field class="form-control" type="password" name="password" placeholder="Password" />
                         <p className="text-danger"><ErrorMessage name="password" /></p>
                     </div>
                     <div className="form-group mt-3 row justify-content-around">
@@ -77,8 +71,8 @@ function Registration() {
                     </div>
                         <div className="form-group mt-3">
                             <div className="form-check">
-                                <lable for="check" className="form-check-lable pl-3">all info. is right</lable>
-                                <Field type="checkbox" className="form-check-input" name="checkbox" id="check" />
+                                <lable for="check" className="form-check-lable pl-3 checkboxtext">All information correct</lable>
+                                <Field type="checkbox" className="form-check-input checkbox" name="checkbox" id="check" />
                                 <p className="text-danger"><ErrorMessage name="checkbox" /></p>
                             </div>
                         </div>

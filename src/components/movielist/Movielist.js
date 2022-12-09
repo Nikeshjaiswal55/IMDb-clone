@@ -25,9 +25,9 @@ const Movielist = () => {
 
     return (
         <>
-            <h2 className="list__title">{(type ? type : "POPULAR").toUpperCase()}</h2>
+            <h2 className="list__title text-center">{(type ? type : "POPULAR").toUpperCase()}</h2>
                 <div class="container">
-                    <div className="row">
+                    <div className="row justify-content-around">
                         {
                             movieList.map(movie => (
                                 <div className='col-lg-3 col-md-6 col-12 card_p mb-5'>

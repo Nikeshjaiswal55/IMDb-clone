@@ -11,13 +11,13 @@ const Home = () => {
     useEffect(() => {
         axios.get("https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US").then((response) => {
             setpopularMovie(response.data.results)
-        }).catch((err)=>{
+        }).catch((err) => {
             alert("Check Your Network (API NOT WORKING)")
         })
     }, [])
     return (
-        <>    
-        <div className="poster">
+        <>
+            <div className="poster">
                 <Carousel
                     showThumbs={false}
                     autoPlay={true}
@@ -28,7 +28,7 @@ const Home = () => {
                     {
                         popularMovies.map(movie => (
                             <Link style={{textDecoration:"none",color:"white"}} to={`/movie/${movie.id}`} >
-                                <div className="posterImage d-flex">
+                                <div className="posterImage d-flex align-items-center">
                                     <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} />
                                 </div>
                                 <div className="posterImage__overlay d-none d-lg-block">
@@ -44,7 +44,7 @@ const Home = () => {
                             </Link>
                         ))
                     }
-                </Carousel>
+                </Carousel> 
                 <Movielist />
                 </div>
         </>

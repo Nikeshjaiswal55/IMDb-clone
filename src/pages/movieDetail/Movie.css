@@ -1,55 +1,22 @@
 
-.movie {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-}
 
-.movie__intro {
-    width: 80%;
-}
+ .movie{
+    min-height: auto;
+    color: #fff;
+ }
 
-.movie__backdrop {
-    width: 100%;
-    height: 500px;
-    object-fit:cover;
-    object-position: 0 35%;
-}
-
-.movie__detail {
-    align-items: center;
-    width: 75%;
-    display: flex;
-    position: relative;
-    bottom: 225px;
-}
-
-.movie__detailLeft {
-    margin-right: 30px;
-}
-
-.movie__poster {
-    width:300px;
+ .movie__poster{
+    width:15rem;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.86) 0px 22px 40px 6px;
-}
+    height: 20rem;
+ }
 
-.movie__detailRight {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    height: 450px;
-    justify-content:space-between ;
-}
+ .movie__backdrop{
+    height: 500px;
+ }
 
-.movie__detailRightTop > div{
-    text-shadow: 0px 0px 5px #000000;
-    margin-bottom: .5rem;
-}
-
-.movie__name {
+ .movie__name {
     font-weight: 600;
     font-size: 3rem;
 }
@@ -57,6 +24,8 @@
 .movie__voteCount {
     margin-left: 1rem;
 }
+
+
 
 .movie__genres {
     margin: 1.25rem 0;
@@ -69,38 +38,20 @@
     margin-right: 1rem;
 }
 
-
 .movie__detailRightBottom {
     margin: 2rem 0;
-    flex: 0.8;
+    /* flex: 0.8; */
 }
 
-.synopsisText {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
-    font-weight: 600;
-    display: flex;
-    position: relative;
+.movie__detail {
     align-items: center;
-}
-.synopsisText > div:last-of-type {
-    margin-left: auto;
-}
-
-.movie__links {
-    position: relative;
-    bottom: 120px;
     display: flex;
-    justify-content: space-between;
-    width: 75%;
-}
-
-.movie__heading {
-    font-size: 2.2rem;
+    position: relative;
+    bottom: 225px;
 }
 
 .movie__Button {
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
     padding: 0.8rem 2rem;
@@ -119,7 +70,3 @@
 .movie__imdbButton {
     background-color:#f3ce13;
 }
-
-
-
-

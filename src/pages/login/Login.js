@@ -44,7 +44,7 @@ const Login = () => {
                         <p className="text-danger"><ErrorMessage name="email" /></p>
                     </div>
                     <div class="form-group text-field">
-                        <Field class="form-control" type="text" name="password" placeholder="Password" />
+                        <Field class="form-control" type="password" name="password" placeholder="Password" />
                         <p className="text-danger"><ErrorMessage name="password" /></p>
                     </div>
                         <button class="btn btn-primary w-100" type="submit">Login</button>

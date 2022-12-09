@@ -55,3 +55,12 @@
     text-align: left;
     width: 50%;
 }
+
+@media screen and (max-width:768px){
+    .slider-wrapper{
+        height: 25rem;
+    }
+    .posterImage{
+        height: 25rem;
+    }
+}
