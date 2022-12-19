@@ -12,6 +12,7 @@ function Header() {
       <Container>
         <Navbar.Brand as={Link} to="/">Nikk-Flix</Navbar.Brand>
         <span className='d-flex'>
+        <div className="d-block d-lg-none"><Icon /></div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         </span>
 
@@ -20,11 +21,7 @@ function Header() {
             <Nav.Link as={Link} to="/movies/popular">Popular</Nav.Link>
             <Nav.Link as={Link} to="/movies/top_rated">Top-rated</Nav.Link>
             <Nav.Link as={Link} to="/movies/upcoming">Upcoming</Nav.Link>
-          {
-            (email)? <Icon />:<>
-            <Nav.Link as={Link} to="/login"><button className="btn btn-color text-light">Login</button></Nav.Link>
-            <Nav.Link as={Link} to="/register"><button className="btn btn-color text-light">Register</button></Nav.Link></>
-          }
+            <span className="d-none d-lg-block"><Icon /></span>
           </Nav>
         </Navbar.Collapse>
       </Container>

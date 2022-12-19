@@ -50,10 +50,10 @@ const Icon = () => {
                 <MenuItem onClick={handleClose}><button className='btn'> {
                  (Name)?
                 <Nav.Link><button className='btn bg-primary text-light' onClick={logout}>Logout</button></Nav.Link>
-                :""
-            //     <>
-            //    <Link to="/login"><button className="btn nik-btn btn-color text-light">login</button></Link>
-            //   <Link  to="/register"><button className="btn btn-color text-light">Register</button></Link></>
+                :
+                <>
+               <div className="mb-2"><Link to="/login"><button className="btn nik-btn btn-color text-light">login</button></Link></div>
+              <div><Link  to="/register"><button className="btn btn-color text-light">Register</button></Link></div></>
           }</button>
           </MenuItem>
             </Menu>
