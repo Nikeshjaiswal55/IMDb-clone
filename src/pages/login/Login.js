@@ -5,6 +5,7 @@ import React from "react";
 import "./Login.css";
 
 
+
 const Login = () => {
     const navigate = useNavigate();
     const defaultvalue = {
@@ -13,8 +14,8 @@ const Login = () => {
     }
 
     const Register = yup.object().shape({
-        email: yup.string().required("enter mail"),
-        password:yup.string().min(6,"minimum six character").required("set ur password")
+        email: yup.string().required("Enter Your E-mail"),
+        password:yup.string().min(6,"minimum six character").required("Required")
     });
 
     const send = (values) => {
@@ -26,7 +27,7 @@ const Login = () => {
         if(values.email===email && values.password===password){
             navigate("/");
         }else{
-            alert("Wrong Information")
+            alert("Wrong Information / Register")
         }
     
     };
@@ -41,11 +42,11 @@ const Login = () => {
                 <Form>
                     <div class="form-group text-field">
                         <Field class="form-control" type="email" name="email" placeholder="Email" />
-                        <p className="text-danger"><ErrorMessage name="email" /></p>
+                        <p className="text-danger p-text"><ErrorMessage name="email" /></p>
                     </div>
                     <div class="form-group text-field">
-                        <Field class="form-control" type="password" name="password" placeholder="Password" />
-                        <p className="text-danger"><ErrorMessage name="password" /></p>
+                        <Field class="form-control" type="password" name="password" placeholder="Password"  />
+                        <p className="text-danger p-text"><ErrorMessage name="password" /></p>
                     </div>
                         <button class="btn btn-primary w-100" type="submit">Login</button>
                 </Form>

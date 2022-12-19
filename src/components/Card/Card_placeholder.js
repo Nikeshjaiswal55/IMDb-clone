@@ -6,7 +6,7 @@ const Card_placeholder = () => {
         <>
             <div class="card-group  placeholder-wave" >
                 <div className='col-lg-12 col-sm-6 col-12 placeholder-wave bg-dark '>
-                    <img className="placeholder  cards__img card-img-top " src="http://via.placeholder.com/400x250" />
+                    <img className="placeholder  cards__img card-img-top " src="" />
                     <div className="card-body placeholder-wave">
                         <h5 className="card-title mt-3 placeholder-wave"> </h5>
                         <h6 className='card-text d-none d-lg-block placeholder-wave'>
