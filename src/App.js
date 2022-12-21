@@ -8,6 +8,7 @@ import Movie from "./pages/movieDetail/Movie";
 import Registration from "./pages/registration/Registeration";
 import Protect from "./components/protect/Protect";
 
+
 function App() {
   return (
     <>
@@ -21,7 +22,7 @@ function App() {
           <Route path="movies/:type" element={<Protect Component={Movielist} />} />
           <Route path="/*" element={<h1>404 error page</h1>} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> 
     </>
   );
 }

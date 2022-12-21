@@ -3,7 +3,7 @@ import axios from 'axios';
 import "./Home.css"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import Movielist from '../../components/movielist/Movielist';
 
 const Home = () => {
@@ -15,6 +15,8 @@ const Home = () => {
             alert("Check Your Network (API NOT WORKING)")
         })
     }, [])
+
+
     return (
         <>
             <div className="poster">
