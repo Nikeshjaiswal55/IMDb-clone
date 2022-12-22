@@ -1,13 +1,19 @@
 import React, { useState,useEffect} from 'react';
+import { useParams } from 'react-router-dom';
 
 const Slider = ({page,changeToggle,total}) => {
+    const {type}=useParams();
     const [counter,setCounter]=useState(1);
     useEffect(()=>{
         const value= page*counter;
-        console.log("start",value - page);
-        console.log("end",value);
+        // console.log("start",value - page);
+        // console.log("end",value);
         changeToggle(value - page, value);
     },[counter]) 
+
+    useEffect(()=>{
+        setCounter(1);
+    },[type])
 
     const buttonClick=(type)=>{
         if(type==="prev"){

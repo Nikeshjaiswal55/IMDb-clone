@@ -6,7 +6,6 @@ import axios from "axios"
 import Slider from "../slider/Slider"
 
 const Movielist = () => {
-
     const [movieList, setMovieList] = useState([])
     const [page, setPage]=useState(3);
     const [toggle, setToggle]=useState({start:0, end:page})
@@ -17,11 +16,11 @@ const Movielist = () => {
     const { type } = useParams()
 
     useEffect(() => {
-        getData()
-    }, [])
+        getData();
+    },[])
 
     useEffect(() => {
-        getData()
+        getData();
     },[type])
 
     const getData = () => {
